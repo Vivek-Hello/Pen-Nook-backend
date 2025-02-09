@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 // Handle preflight requests
 // In your Express server configuration
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: process.env.CORS_ORIGIN,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
